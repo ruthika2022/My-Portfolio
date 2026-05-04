@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUTTA RUTHIKA | Futuristic Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js and GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+          }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">RUTHIKA.P</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Internship</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="home">
+        <div class="container header-container">
+            <div class="header-content reveal">
+                <h1 class="glitch" data-text="PUTTA RUTHIKA">PUTTA RUTHIKA</h1>
+                <p class="tagline">Web Development Trainee & Full Stack Aspirant</p>
+                <p class="subtitle">Detail-oriented web developer passionate about building responsive, user-focused applications with clean and efficient code.</p>
+                <div class="header-btns">
+                    <a href="#projects" class="cta-button">View Projects</a>
+                    <a href="#contact" class="cta-button secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="profile-container reveal">
+                <div class="profile-image">
+                    <div id="hero-3d-model"></div>
+                    <img src="profile.jpeg" alt="Putta Ruthika Profile" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title reveal">Career Objective</h2>
+            <div class="about-content glass-card reveal">
+                <p>
+                    Detail-oriented web development trainee with hands-on experience in HTML5, CSS3, JavaScript, Python, and SQL. 
+                    Passionate about building responsive and user-focused web applications while contributing effectively in collaborative development environments. 
+                    Eager to learn new technologies and continuously improve coding skills to deliver high-quality solutions. 
+                    Strong problem-solving abilities with a commitment to writing clean, efficient, and maintainable code.
+                </p>
+                <div class="personal-details-grid">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Peddhapalli, Telangana</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-language"></i>
+                        <span>English, Hindi, Telugu</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-palette"></i>
+                        <span>Tech Exploration, Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title reveal">Academic Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">2022 - 2024</span>
+                        <h3>Class 12 (M.P.C)</h3>
+                        <p class="institution">SPR Junior College, Warangal</p>
+                        <p class="score">Percentage: 69%</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">2021 - 2022</span>
+                        <h3>Class 10</h3>
+                        <p class="institution">ZPHS, Appannapeta</p>
+                        <p class="score">Percentage: 85%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass-card reveal">
+                    <div class="category-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="category-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Backend & DB</h3>
+                    <ul>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="category-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><i class="fas fa-file-word"></i> MS Word</li>
+                        <li><i class="fas fa-code"></i> VS Code</li>
+                        <li><i class="fab fa-github"></i> GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card reveal">
+                    <div class="category-icon"><i class="fas fa-users"></i></div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                        <li><i class="fas fa-user-friends"></i> Teamwork</li>
+                        <li><i class="fas fa-fist-raised"></i> Leadership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title reveal">Training & Internship</h2>
+            <div class="experience-card glass-card reveal">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Academy For Careers In Technology</h3>
+                        <p class="company">By Freshworks</p>
+                    </div>
+                    <span class="duration">08/2025 - Current</span>
+                </div>
+                <p class="exp-desc">Currently undergoing intensive full-stack development training, gaining expertise in modern web technologies and collaborative development.</p>
+                <div class="exp-tags">
+                    <span>Front-End</span>
+                    <span>Back-End</span>
+                    <span>Full Stack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Mission Log</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-basket"></i>
+                        <div class="overlay">
+                            <a href="https://ruthika2022.github.io/Kissan-Market/" target="_blank" class="view-btn">Launch <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Kissan Market</h3>
+                        <p class="tech-stack">HTML, CSS, JS, Python, MySQL</p>
+                        <p class="description">A web-based platform connecting farmers and buyers for direct selling of fresh produce.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Emotion Detector</h3>
+                        <p class="tech-stack">Teachable Machine, Python, JS</p>
+                        <p class="description">Real-time emotion recognition system built with Google Teachable Machine and integrated into a web interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section id="certifications">
+        <div class="container">
+            <div class="dual-grid">
+                <div class="cert-section reveal">
+                    <h2 class="section-title left">Certifications</h2>
+                    <ul class="cert-list glass-card">
+                        <li><i class="fas fa-certificate"></i> Introduction to HTML – Simplilearn</li>
+                        <li><i class="fas fa-certificate"></i> Introduction to CSS – Simplilearn</li>
+                        <li><i class="fas fa-certificate"></i> Web Development for Beginners – Simplilearn</li>
+                        <li><i class="fas fa-certificate"></i> Python Intro Course – Nexademy</li>
+                        <li><i class="fas fa-certificate"></i> Communication – Simplilearn</li>
+                        <li><i class="fas fa-certificate"></i> Public Speaking – Simplilearn</li>
+                        <li><i class="fas fa-certificate"></i> Spoken English – Simplilearn</li>
+                    </ul>
+                </div>
+                <div class="achieve-section reveal">
+                    <h2 class="section-title left">Achievements</h2>
+                    <div class="achieve-grid">
+                        <div class="achieve-card glass-card">
+                            <i class="fas fa-award"></i>
+                            <h4>Best Narrator</h4>
+                            <p>ACT Showcase Season-1 (Winner)</p>
+                        </div>
+                        <div class="achieve-card glass-card">
+                            <i class="fas fa-trophy"></i>
+                            <h4>ACT Top-15</h4>
+                            <p>Edunet Foundation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Establish Connection</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <div class="info-card glass-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:ruthikaputta@gmail.com">ruthikaputta@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 7671962258</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Peddhapalli, Telangana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-socials reveal">
+                    <div class="social-glass glass-card">
+                        <h4>Social Command Center</h4>
+                        <div class="social-btns">
+                            <a href="https://www.linkedin.com/in/putta-ruthika" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/ruthika2022" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 PUTTA RUTHIKA. Designed with Neon & Passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
