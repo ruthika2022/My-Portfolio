@@ -15,9 +15,33 @@ const COLORS = {
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
+if (menuToggle && navLinks) {
+    // Toggle menu when hamburger is clicked
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    const navItems = navLinks.querySelectorAll('a');
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            navLinks.classList.remove('active');
+        }
+    });
+    
+    // Close menu on window resize if screen becomes large
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 767) {
+            navLinks.classList.remove('active');
+        }
     });
 }
 
