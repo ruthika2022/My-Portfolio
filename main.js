@@ -5,10 +5,10 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 
 // --- Configuration ---
 const COLORS = {
-    cyan: 0x00f2fe,
-    purple: 0x7000ff,
-    pink: 0xff007f,
-    bg: 0x020205
+    cyan: 0x38d6c6,
+    purple: 0xf4b860,
+    pink: 0xff6f61,
+    bg: 0x071013
 };
 
 // --- Mobile Menu ---
